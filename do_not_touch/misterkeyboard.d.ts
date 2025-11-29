@@ -1,10 +1,10 @@
 // Auto-generated TypeScript definitions for MisterKeyboard scripting API.
-// Generated on 2025-11-29 22:21:36 +0000 using Mister Keyboard 2.2.0.
+// Generated on 2025-11-29 22:36:19 +0000 using Mister Keyboard 2.2.0.
 
 export {};
 
 /*
- * Public Interfaces
+ * Public Types
  */
 
 interface FetchInit {
@@ -13,7 +13,38 @@ interface FetchInit {
 }
 
 /*
- * Internal Interfaces
+ * Public Classes
+ */
+
+interface Response {
+    /**
+     * A boolean indicating whether the response was successful (status in the range 200 - 299) or not.
+     */
+    readonly ok: boolean;
+    
+    /**
+     * The status code of the response. (This will be 200 for a success).
+     */
+    readonly status: number;
+    
+    /**
+     * An object containing all headers included in the response.
+     */
+    readonly headers: Record<string, string>;
+    
+    /**
+     * Returns a promise that resolves with an UTF-8 text representation of the response body.
+     */
+    text(): Promise<string>;
+    
+    /**
+     * Returns a promise that resolves with the result of parsing the response body text as JSON.
+     */
+    json(): Promise<unknown>;
+}
+
+/*
+ * Internal Classes
  */
 
 interface ConsoleAPI {
