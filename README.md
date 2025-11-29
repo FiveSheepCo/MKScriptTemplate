@@ -6,9 +6,9 @@ Mister Keyboard script template with typings.
 1. Fork this repository (recommended), or download it as a ZIP and extract it.
 2. Open the project folder in your favorite code editor (e.g. [Visual Studio Code](https://code.visualstudio.com/)).
 3. Run `npm install`[^1] in the terminal to install the necessary dependencies.
+4. Simply edit the `src/script.ts` file!
 
-Simply edit the `src/script.ts` file!
-
+You can create and manage as many scripts as you want. Just make sure they're in the `src/` folder, and that the file ending is `.ts`!
 If your editor is set up correctly, you should get autocompletion, type checking and inline documentation for the full Mister Keyboard Scripting API.
 
 > [!TIP]
