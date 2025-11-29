@@ -11,13 +11,15 @@ Simply edit the `src/script.ts` file!
 
 If your editor is set up correctly, you should get autocompletion, type checking and inline documentation for the full Mister Keyboard Scripting API.
 
-> [!TIP] Once you have forked this repository, you can just press the <key>.</key> key on GitHub to open the project in GitHub Codespaces, which comes with everything pre-installed and ready to go! You will get a fully featured coding environment in your browser.
+> [!TIP]
+> Once you have forked this repository, you can just press the <key>.</key> key on GitHub to open the project in GitHub Codespaces, which comes with everything pre-installed and ready to go! You will get a fully featured coding environment in your browser.
 
 ### Building
 
 If you write normal JavaScript code, you can simply copy your script straight into Mister Keyboard.
 
-> [!IMPORTANT] If you want to use TypeScript features (like types, interfaces, etc.), you need to compile your code first. You can do this by running `npm run build` in the terminal. This will create a `dist/<your_script>.js` file that you can then load into Mister Keyboard.
+> [!IMPORTANT]
+> If you want to use TypeScript features (like types, interfaces, etc.), you need to compile your code first. You can do this by running `npm run build` in the terminal. This will create a `dist/<your_script>.js` file that you can then load into Mister Keyboard.
 
 ### Upgrading
 
