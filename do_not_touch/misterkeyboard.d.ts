@@ -1,7 +1,7 @@
 // Auto-generated TypeScript definitions for MisterKeyboard scripting API.
-// Generated on 2025-12-11 21:03:47 +0000 using Mister Keyboard 2.2.0.
+// Generated on 2026-02-17 12:52:44 +0000 using Mister Keyboard 2.3.0.
 
-export {};
+export { };
 
 /*
  * Public Types
@@ -108,13 +108,6 @@ interface DocumentAPI {
 	getFullText(): Promise<string>;
 
 	/**
-	 * Waits for a short amount of time, until a change in the document is detected or ~100ms have passed without any changes.
-	 *
-	 * If you want to wait for explicit user input, use `waitForUserInput` instead.
-	 */
-	waitForDocumentChange(): Promise<void>;
-
-	/**
 	 * Waits until a change in the document is detected.
 	 *
 	 * If you just want to make sure a change was processed correctly, use `waitForDocumentChange` instead.
@@ -149,6 +142,13 @@ interface DocumentAPI {
 	adjustCursorPosition(utf16Offset: number): Promise<void>;
 }
 
+interface ClipboardAPI {
+	/**
+	 * Gets the text currently in the pasteboard, or `undefined` if none is present.
+	 */
+	getText(): Promise<string>;
+}
+
 /*
  * Globals
  */
@@ -158,4 +158,5 @@ declare global {
 	const console: ConsoleAPI;
 	const task: TaskAPI;
 	const document: DocumentAPI;
+	const clipboard: ClipboardAPI;
 }
