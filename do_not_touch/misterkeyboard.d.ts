@@ -1,7 +1,13 @@
 // Auto-generated TypeScript definitions for MisterKeyboard scripting API.
-// Generated on 2026-02-17 12:52:44 +0000 using Mister Keyboard 2.3.0.
+// Generated on 2026-03-03 15:49:32 +0000 using Mister Keyboard 2.4.0.
 
 export { };
+
+/*
+ * Type Aliases
+ */
+
+type DocumentEvent = "change"
 
 /*
  * Public Types
@@ -93,6 +99,16 @@ interface DocumentAPI {
 	readonly textAfterCursor: string;
 
 	/**
+	 * Returns the currently selected text, or an empty string if no text is selected.
+	 */
+	readonly selectedText: string;
+
+	/**
+	 * Returns a boolean value indicating whether the user has currently selected any text.
+	 */
+	readonly hasSelectedText: boolean;
+
+	/**
 	 * Gathers the full text before the cursor. This can be a lot slower than `textBeforeCursor`!
 	 */
 	getFullTextBeforeCursor(): Promise<string>;
@@ -140,6 +156,22 @@ interface DocumentAPI {
 	 * Adjusts the cursor position by the specified `utf16Offset`. Positive values move the cursor forward, and negative values move the cursor backward.
 	 */
 	adjustCursorPosition(utf16Offset: number): Promise<void>;
+
+	/**
+	 * Adds an event listener to the document.
+	 *
+	 * This requires a “use events” declaration at the top of the document.
+	 */
+	on(event: DocumentEvent, handler: () => Void): void;
+
+	/**
+	 * Removes an event listener from the document.
+	 *
+	 * If only the event name is supplied, all listeners for the event are removed.
+	 *
+	 * If the event handler function is supplied as well, only this specific event handler is removed.
+	 */
+	off(event: DocumentEvent, handler?: () => Void): void;
 }
 
 interface ClipboardAPI {
@@ -147,6 +179,11 @@ interface ClipboardAPI {
 	 * Gets the text currently in the pasteboard, or `undefined` if none is present.
 	 */
 	getText(): Promise<string>;
+
+	/**
+	 * Puts the specified text into the pasteboard. This requires Full Access to be enabled in the iOS keyboard settings.
+	 */
+	setText(text: string): Promise<void>;
 }
 
 /*
